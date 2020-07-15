@@ -152,7 +152,7 @@
                             
                             while($row = $result->fetch_assoc()) {
                                 echo "<div class='commentRight'>";
-                                echo "  <small>" . $row['date'] . "</small><br>" . $row['text'];
+                                echo "  <small>" . $row['date'] . " <a href='deletecomment.php?id=" . $row['id'] . "'>[delete]</a></small><br>" . $row['text'];
                                 echo "  <a style='float: right;' href='profile.php?id=" . getID($row['author'], $conn) . "'>" . $row['author'] . "</a> <br>";
                                 echo "  <img class='commentPictures' style='float: right;' height='80px;'width='80px;'src='pfp/" . getPFP($row['author'], $conn) . "'><br><br><br><br><br>";
                                 echo "</div>";
